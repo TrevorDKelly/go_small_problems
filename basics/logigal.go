@@ -24,4 +24,6 @@ func main() {
 
   // fmt.Println(true || zero)
   // does not work
+
+  fmt.Println(true || !!(one))
 }
