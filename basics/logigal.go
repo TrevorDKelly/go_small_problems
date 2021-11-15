@@ -19,4 +19,9 @@ func main() {
   // fmt.Printf("empty string %v", eStrTest)
   // ERRORS RAISED
   //   && not defined on non-boolean types
+
+  // test short circuting
+
+  // fmt.Println(true || zero)
+  // does not work
 }
