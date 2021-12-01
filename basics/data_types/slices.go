@@ -55,4 +55,31 @@ func main() {
 
   // s12 := make(s10)
   // fmt.Println(s12)
+
+
+  var myArr2 [5]int
+  fmt.Println(myArr2)
+
+  s13 := myArr2[:4]
+  myArr2[2] = 3
+  fmt.Println(s13)
+  fmt.Printf("s13 cap is %v\n", cap(s13))
+  s13 = append(s13, 5)
+  fmt.Printf("s13 cap is %v\n", cap(s13))
+  myArr2[3] = 4
+  fmt.Println(s13)
+  // same underlying array after appending
+  s13 = append(s13, 6)
+  fmt.Printf("s13 cap is %v\n", cap(s13))
+  myArr2[1] = 2
+  fmt.Println(myArr2)
+  fmt.Println(s13)
+  // if append surpasses the underlying array length a new one is created
+  s14 := s13[:]
+  fmt.Printf("s14 cap is %v\n", cap(s14))
+  s13 = append(s13, 7, 8, 9, 10, 11)
+  s13[0] = 1
+  fmt.Printf("s13 cap is %v\n", cap(s13))
+  fmt.Printf("s14 cap is %v\n", cap(s14))
+  fmt.Println(s14)
 }
