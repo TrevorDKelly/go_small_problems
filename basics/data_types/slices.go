@@ -82,4 +82,15 @@ func main() {
   fmt.Printf("s13 cap is %v\n", cap(s13))
   fmt.Printf("s14 cap is %v\n", cap(s14))
   fmt.Println(s14)
+
+  //copy
+  slice := []int{1,2,3,4,5}
+  first3 := make([]int, 3)
+
+  copy(first3, slice[:3])
+  fmt.Println(first3)
+  copy(first3, slice[1:])
+  fmt.Println(first3)
+  copy(first3[1:], slice[:3])
+  fmt.Println(first3)
 }
